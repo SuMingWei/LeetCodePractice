@@ -14,6 +14,7 @@ public:
         for(int i=0;i<grid.size();i++){
             for(int j=0;j<grid[0].size();j++){
                 if(grid[i][j] == '1'){
+                    grid[i][j] == '2';
                     island++;
                     tmp.x = i;
                     tmp.y = j;
@@ -22,7 +23,6 @@ public:
                         int x = visit.front().x;
                         int y = visit.front().y;
                         visit.pop();
-                        grid[x][y] = '2';
                         if(x-1 >= 0 && grid[x-1][y] == '1'){
                             tmp.x = x-1;
                             tmp.y = y;
